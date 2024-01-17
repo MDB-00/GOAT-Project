@@ -1,11 +1,38 @@
-<style>
-  .title {
-    text-align: center;
+.blur {
+  height: 300px;
+  position:relative;
+  font-size: 44px;
+}
+
+.blur:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(images/connor_running.jpg);
+  filter: blur(2px);
+  z-index:0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blur span {
+  position:relative;
+  z-index:1;
+}
+
+.title {
+    /* text-align: center;
     font-size: xx-large;
-    line-height: 500%;
-    }
+    line-height: 500%; */
+    z-index:1;
+    position:absolute;
+
+  }
     body {
-      background-color: black;
+     background-color: black;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
@@ -24,19 +51,32 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: 400px;
-      text-align: center;
-      font-size: xx-large;
       line-height: 500%;
       top: 0;
       transition: top 0.2s ease-in-out;
     }
+
+    .red-text {
+      color: red;
+      text-align: center;
+    }
+
     .links {
-        font-size: xx-large;
-        border-style: solid;
-        border-color: white;
-        height: 50px;
-        vertical-align: middle;
-        position: sticky;
+      font-size: xx-large;
+      border-style: solid;
+      border-color: white;
+      height: 50px;
+      vertical-align: middle;
+      position: sticky;
+    }
+    .buttons {
+      color: white;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px; 
     }
     h3 {
         color: white;
@@ -53,4 +93,8 @@
     a {
         font-size: x-large;
     }
-  </style>
+    .action_images {
+      width: 800px;
+      margin-left: 400px;
+      border-radius: 20px;
+    }
